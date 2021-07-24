@@ -3,9 +3,13 @@ import '../styles/app.scss';
 import '../styles/styles.css';
 import 'bootstrap';
 import 'regenerator-runtime';
+// import CRUD
+import './crud/main';
+import './crud/database';
 // component
 import './component/carousel-bar';
 import './component/navbar';
+import './component/database-bar';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 

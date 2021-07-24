@@ -19,5 +19,11 @@ class dataCovidSource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async bedData() {
+    const response = await fetch(API_ENDPOINT.BED_RS);
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 export default dataCovidSource;

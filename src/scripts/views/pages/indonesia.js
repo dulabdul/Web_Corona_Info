@@ -1,4 +1,7 @@
-import { createVaksinItemTemplate, createIndonesiaItemTemplate, createProvItemTemplate } from '../templates/template-creator';
+/* eslint-disable max-len */
+import {
+  createVaksinItemTemplate, createIndonesiaItemTemplate, createBedItemTemplate,
+} from '../templates/template-creator';
 import dataCovidSource from '../../data/datacovid';
 
 const Detail = {
@@ -7,19 +10,20 @@ const Detail = {
     <div id="indonesia"></div>
      <div id="vaksin"></div>
      <div id="provinsi"></div>
+     <div id="tempat_tidur"></div>
     `;
   },
 
   async afterRender() {
     const indonesia = await dataCovidSource.IndonesiaData();
     const vaksin = await dataCovidSource.VAKSIN();
-    const provinsi = await dataCovidSource.provData();
+    const bed = await dataCovidSource.bedData();
     const indonesiaContainer = document.querySelector('#indonesia');
     indonesiaContainer.innerHTML = createIndonesiaItemTemplate(indonesia);
     const vaksinContainer = document.querySelector('#vaksin');
     vaksinContainer.innerHTML = createVaksinItemTemplate(vaksin);
-    const provContainer = document.querySelector('#provinsi');
-    provContainer.innerHTML = createProvItemTemplate(provinsi);
+    const bedContainer = document.querySelector('#tempat_tidur');
+    bedContainer.innerHTML = createBedItemTemplate(bed);
   },
 };
 

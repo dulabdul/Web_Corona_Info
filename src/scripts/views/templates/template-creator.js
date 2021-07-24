@@ -143,8 +143,28 @@ const createVaksinItemTemplate = (vaksin) => `
 </div>
 </div>
   `;
-
-const createProvItemTemplate = (prov) => `
-  <h1>${prov.provinsi}</h1>
+const createBedItemTemplate = (bed) => `
+<div class="container">
+<h2 class="mt-4 font-weight-bold">Daftar Ketersediaan Tempat Tidur Di Rumah Sakit</h2>
+<div class="row justify-content-center">
+  <div class="col-md-12">
+  <div class="card mt-3 shadow">
+  <div class="card-body">
+      <h5>Nama Rumah Sakit</h5>
+      <p>${bed.data.name}</p>
+      <h5>Alamat</h5>
+      <p>${bed.data.address}</p>
+      <h5>No Telepon</h5>
+      <p>${bed.data.phone}</p>
+      ${bed.data.bedDetail.map((detail) => `
+      <p><span class="">${detail.stats.title} : </span><span class="ml-2">${detail.stats.bed_available}</span></p>
+      `).join('')}
+  </div>
+</div>
+  </div>
+</div>
+</div>
   `;
-export { createIndonesiaItemTemplate, createVaksinItemTemplate, createProvItemTemplate };
+export {
+  createIndonesiaItemTemplate, createVaksinItemTemplate, createBedItemTemplate,
+};

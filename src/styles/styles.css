@@ -35,3 +35,35 @@ html {
   .row img{
     max-width: 300px!important;
   }
+  /*data base */
+  .data-item > h3{
+    margin-left: 5px;
+    color: #000;
+  }
+  .data-item > h4{
+    margin-left: 5px;
+    color: #000;
+  }
+  .data{
+    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .data-item{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    width: 100%;
+    background-color: #fff;
+    padding:20px;
+  }
+  .btn-red{
+    background-color: #dc3545;
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .btn-green{
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+
+  }
