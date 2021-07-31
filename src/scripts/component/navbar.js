@@ -104,6 +104,48 @@ class headerBar extends HTMLElement {
     color: #c1121f;
     font-weight: 800;
     }
+    .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+ color: #c1121f;
+ font-weight: 800;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
     /*Responsive */
     @media screen and (max-width:650px){
       .app-bar .app-bar__navigation {
@@ -151,17 +193,26 @@ class headerBar extends HTMLElement {
        </style>
       <header class="app-bar">
       <div class="app-bar__menu">
-        <button id="hamburgerButton">☰</button>
+        <button id="hamburgerButton" aria-label="hamburger Button">☰</button>
       </div>
       <div class="app-bar__brand">
         <h1>Covid Web</h1>
       </div>
       <nav id="navigationDrawer" class="app-bar__navigation">
-        <ul>
-            
-          <li><a href="#/">Home</a></li>
-          <li><a href="#/favorite">Favorite</a></li>
-          <li><a href="https://www.linkedin.com/in/abdul-rahman-2737131a1/" target="_blank" rel="noreferrer">AboutUs</a></li>
+        <ul>   
+          <li><a tabindex="0" href="#/" class="active">Home</a></li>
+          <li><a tabindex="0" href="https://www.linkedin.com/in/abdul-rahman-2737131a1/" target="_blank" rel="noreferrer">AboutUs</a></li>
+          <div class="dropdown">
+          <button class="dropbtn">Covid<span>&#9660;</span>
+          </button>
+          <div class="dropdown-content">
+          <a tabindex="0" href="#indonesia">Indonesia</a>
+          <a tabindex="0" href="#vaksin">Vaksinasi</a>
+          <a tabindex="0" href="#titleProv">Provinsi</a>
+          <a tabindex="0" href="#titleHospital">Rumah Sakit</a>
+          </div>
+          </div> 
+          <li><a tabindex="0" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>

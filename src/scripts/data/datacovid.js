@@ -14,16 +14,14 @@ class dataCovidSource {
     return responseJson;
   }
 
-  static async provData() {
+  static async PROPINSI() {
     const response = await fetch(API_ENDPOINT.PROVINSI);
-    const responseJson = await response.json();
-    return responseJson;
+    return response.json();
   }
 
-  static async bedData() {
-    const response = await fetch(API_ENDPOINT.BED_RS);
-    const responseJson = await response.json();
-    return responseJson;
+  static async HOSPITAL() {
+    const response = await fetch('rumahsakit.json');
+    return response.json();
   }
 }
 export default dataCovidSource;

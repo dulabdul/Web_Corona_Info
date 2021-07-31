@@ -59,11 +59,3 @@ registerRoute(
     plugins: [new ExpirationPlugin({ maxEntries: 50 })],
   }),
 );
-registerRoute(
-  ({ request }) => request.destination === 'style'
-  || request.destination === 'script'
-  || request.destination === 'worker',
-  new StaleWhileRevalidate({
-    cacheName: 'assets-cache',
-  }),
-);

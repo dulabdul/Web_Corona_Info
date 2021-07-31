@@ -1,69 +1,271 @@
-html {
+html
+{
     scroll-behavior: smooth;
-    height: 3000px;
-  }
-  /* navbar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: black;
-    padding: 8px 12px;
-    text-decoration: none;
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* navbar */
+.topnav a
+{
     font-size: 17px;
+    display: block;
+    float: left;
+    padding: 8px 12px;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: black;
     border-bottom: 3px solid transparent;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .topnav a:hover {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.topnav a:hover
+{
     color: #000;
     border-bottom: 3px solid #af0404;
-  }
-  
-  .topnav a.active {
+}
+.topnav a.active
+{
     border-bottom: 3px solid #af0404;
-  }
-  /* akhir navigasi */
-  /* carousel */
-  .carousel-item img{
-      max-height: 600px;
-  }
-  /* style covid */
-  .card i {
-    font-size: 22px;
-    color: #DA0037!important;
-  }
-  .row img{
-    max-width: 300px!important;
-  }
-  /*data base */
-  .data-item > h3{
-    margin-left: 5px;
-    color: #000;
-  }
-  .data-item > h4{
-    margin-left: 5px;
-    color: #000;
-  }
-  .data{
-    gap: 16px;
+}
+/* akhir navigasi */
+/* carousel */
+.carousel-item img
+{
+    max-height: 600px;
+}
+/* style covid */
+#vaksin{
+    padding-top: 65px;
+}
+#indonesia{
+    padding-top: 65px;
+}
+.provins_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-  .data-item{
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+.card i
+{
+    font-size: 40px;
+
+    color: #da0037!important;
+}
+.row img
+{
+    max-width: 300px!important;
+}
+.card p
+{
+    font-size: 50px;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    letter-spacing: 3px;
+}
+.suptag {
+    font-size: 32px;
+    color: #000;
+}
+.suptag i {
+    font-size: 28px !important;
+    color: #000 !important;
+}
+.title_covid
+{
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+.sembuh{
+    color: #016556;
+}
+.mati{
+    color: #A30000;
+}
+.aktif{
+    color: #E06C00;
+}
+/*data base */
+.data-item > h3
+{
+    margin-left: 5px;
+
+    color: #000;
+}
+.data-item > h4
+{
+    margin-left: 5px;
+
+    color: #000;
+}
+.data
+{
+    display: grid;
+
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.data-item
+{
     width: 100%;
+    padding: 20px;
+
     background-color: #fff;
-    padding:20px;
-  }
-  .btn-red{
-    background-color: #dc3545;
-    color: white;
-    font-size: 18px;
-    margin-left: 10px;
-  }
-  .btn-green{
-    background-color: #28a745;
-    color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+.btn-red
+{
     font-size: 18px;
 
-  }
+    margin-left: 10px;
+
+    color: white;
+    background-color: #dc3545;
+}
+.btn-green
+{
+    font-size: 18px;
+
+    color: white;
+    background-color: #28a745;
+}
+.prop{
+    height: 450px;
+}
+.hospital i{
+    font-size: 23px;
+    color: #da0037;
+}
+/* Responsive */
+@media screen and (max-width: 360px){
+    .card p {
+        font-size: 36px;
+    }
+    .card i {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .suptag {
+        font-size: 22px;
+    }
+    .suptag i {
+        font-size: 18px!important;
+    }
+    .card p
+    {
+        font-size: 30px;
+    }
+    .card i
+    {
+        font-size: 22px;
+    }
+
+    .prop h3{
+        font-size: 22px;
+    }
+    .prop{
+        height:max-content;
+    }
+
+}
+@media screen and (max-width: 650px){
+   .provins_container{
+    grid-template-columns: 1fr;
+}
+}
+@media screen and (max-width: 992px) and (min-width: 769px){
+        .suptag {
+        font-size: 21px;
+    }
+    .suptag i {
+        font-size: 16px!important;
+    }
+    .card i{
+        font-size: 26px;
+    }
+    .card p{
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 940px) and (min-width: 650px){
+  .provins_container{
+    grid-template-columns: 1fr 1fr;
+}
+}
+/* footer */
+.footer{
+    background-color: #111;
+    padding: 30px;
+}
+.footer_konten h2{
+    position: relative;
+    padding: 10px 0 15px 16px;
+    line-height: 1px;
+    border-left: 1px solid #eee;
+    letter-spacing: 2px;
+    margin-bottom: 16;
+}
+.footer_konten h2:before{
+    content: '';
+    width: 4px;
+    height: 38px;
+    position: absolute;
+    left: -1px;
+    bottom: 0;
+    background: #da0037;
+}
+.footer_name{
+    background-color: #000;
+}
+.name_description{
+    color: #999!important;
+}
+.footer_konten ul li a{
+     min-width: 44px;
+    min-height: 44px;
+    list-style-type: none;
+    text-decoration: none;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+}
+.footer_konten ul li a:hover{
+  color:#fff ;
+}
+.footer_konten ul li {
+    list-style-type: none;
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+}
+.icon a{
+    color: #da0037;
+    text-decoration: none;
+    font-size: 32px;
+    margin-left: 16px;
+    transition: all 0.3s ease-in-out;
+    float: left;
+    border-bottom: 3px solid transparent;
+     min-width: 44px;
+    min-height: 44px;
+}
+.icon a.active{
+    border-bottom: 3px solid #fff;
+}
+.footer_name p{
+    padding: 16px;
+}
+.icon a:hover{
+    color: #fff;
+}

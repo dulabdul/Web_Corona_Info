@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-expressions */
+/*
 const { default: addData } = require('./database');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,3 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
     addData();
   });
 });
+*/

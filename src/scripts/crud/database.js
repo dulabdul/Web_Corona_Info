@@ -1,4 +1,5 @@
 /* eslint-disable no-use-before-define */
+/*
 const NAME_USER = 'Nama-peserta';
 const JENIS_VAKSIN = 'Jenis-vaksin';
 const addData = () => {
@@ -85,3 +86,4 @@ const undodataCompleted = (dataElement) => {
   dataElement.remove();
 };
 export default addData;
+*/

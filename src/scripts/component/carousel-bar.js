@@ -9,10 +9,22 @@ class carouselBar extends HTMLElement {
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="covid.jpg" class="d-block w-100" alt="Covid-19" />
+        <picture>
+        <source class="d-block w-100 lazyload" media="(max-width: 600px)" srcset="./images/covid-small.jpg">
+        <img class="d-block w-100 lazyload"
+        src='./images/covid-large.jpg' 
+        alt="covid_image"></img>
+
+        </picture>
         </div>
         <div class="carousel-item">
-          <img src="covid1.jpg" class="d-block w-100" alt="Stay_Safe" />
+          <picture>
+        <source class="d-block w-100 lazyload" media="(max-width: 600px)" srcset="./images/covid1-small.jpg">
+        <img class="d-block w-100 lazyload"
+        src='./images/covid1-large.jpg' 
+        alt="Stay_Safe"></img>
+
+        </picture>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
